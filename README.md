@@ -1,11 +1,53 @@
-<div align="center">
+# ThermoLab — 전자기기 냉각 실험실
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+2022 개정 교육과정 고등학교 2학년 물리학 「Ⅱ. 열과 에너지」 단원 및 전기전자공학 열관리 진로 연계 인터랙티브 탐구 학습 웹앱
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🔬 주요 기능
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. **물리 개념 학습 (7단계 체계적 학습)**
+   - 대단원 1. 열과 일 (01. 열전달과 우리 생활, 02. 물질의 상태 변화와 이상 기체, 03. 열역학 제1법칙)
+   - 대단원 2. 열기관과 엔트로피 (04. 열기관과 우리 생활, 05. 엔트로피와 열역학 제2법칙, 06. 전기전자공학 심화)
+   - 9종 전용 시뮬레이터, KaTeX 공식 및 계산 예제, 3문항 개념 퀴즈, 오답 노트, 핵심 용어 사전 탑재
+2. **가설 설정**
+   - 3가지 상황별(단열 vs 고전도, 방열 면적, 강제 대류 팬 풍량) 가설 수립 및 예측
+3. **가상 실험실 (Lumped Thermal Model Simulator)**
+   - CPU 발열량, 히트싱크 재질(구리/알루미늄/철/플라스틱), 방열판 표면적, 냉각 팬 풍량 실시간 4차 룬게쿠타(RK4) 열전달 수치 해석
+4. **자동 냉각 제어 실험실**
+   - 팬 항시 OFF vs 항시 ON vs 히스테리시스($T_{high}, T_{low}$) 피드백 제어 에너지 절감 및 온도 안정성 비교
+5. **엔지니어링 챌린지**
+   - 3가지 미션(게이밍 PC 발열 억제, 초저전력 팬 제어, 스마트폰 슬림 패키징) 해결 및 점수/등급 평가
+6. **과학 탐구 보고서**
+   - 실험 데이터, 가설 검증, 결론 자동 생성 및 인쇄/PDF 내보내기
 
-</div>
+---
+
+## 🛠️ 기술 스택
+
+- **Frontend**: React 19, TypeScript, Vite
+- **Styling**: Tailwind CSS v4
+- **Charts & Visualization**: Recharts, Canvas Confetti
+- **Formulas & Icons**: KaTeX, Lucide React
+
+---
+
+## 🚀 로컬 실행 방법
+
+### 1. 패키지 설치
+```bash
+npm install
+```
+
+### 2. 개발 서버 실행
+```bash
+npm run dev
+```
+
+브라우저에서 `http://localhost:3000`으로 접속합니다.
+
+### 3. 프로덕션 빌드
+```bash
+npm run build
+npm run preview
+```
